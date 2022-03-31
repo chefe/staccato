@@ -5,12 +5,12 @@ pkgdesc='Staccato555 BT'
 arch=('any')
 url='http://legionfonts.com/fonts/staccato-555-bt'
 license=()
-depends=('fontconfig' 'xorg-font-utils')
+depends=()
 source=('http://legionfonts.com/download/staccato-555-bt')
 sha256sums=('08ddcc12f119d62e517c8e73d8c88f023d33763166cabce227ab13f9ecef4a8c')
 
 prepare() {
-    mv Staccato*.ttf staccato555-bt.ttf
+  mv Staccato*.ttf staccato555-bt.ttf
 }
 
 package() {
