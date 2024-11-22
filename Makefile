@@ -1,12 +1,12 @@
 build:
-	makepkg .
-
-clean:
-	rm -rf src pkg staccato*
+	makepkg --clean
 
 install:
-	sudo pacman -U staccato555-*.pkg.tar.zst
+	makepkg --clean --install
 
-rebuild: clean build
+lint:
+	namcap PKGBUILD
+	shellcheck --shell=bash --exclude=SC2034,SC2154 PKGBUILD
 
-clean-install: clean build install
+clean:
+	git clean -dfX
